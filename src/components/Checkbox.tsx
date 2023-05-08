@@ -1,9 +1,9 @@
 import { DetailedHTMLProps, InputHTMLAttributes, forwardRef } from 'react';
 
 interface Props
-  extends DetailedHTMLProps<
-    InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
+  extends Omit<
+    DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
+    'type'
   > {
   name: string;
   label: string;
