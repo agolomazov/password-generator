@@ -11,7 +11,7 @@ function App() {
     onChangePasswordLength,
     onChangeCheckbox,
     generatePassword,
-  } = usePasswordGeneratorData();
+  } = usePasswordGeneratorData({ passwordLength: 19, numbers: false });
   const [generatedPassword, setGeneratedPassword] = useState('');
   const [copied, setCopied] = useState(false);
 

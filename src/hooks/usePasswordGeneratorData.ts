@@ -90,9 +90,12 @@ const generatePassword = ({
   return characters.join('');
 };
 
-const usePasswordGeneratorData = () => {
+const usePasswordGeneratorData = (
+  config?: Partial<PasswordGeneratorConfig>
+) => {
   const [mergedConfig, setConfig] = useState<PasswordGeneratorConfig>({
     ...defaultValues,
+    ...config,
   });
 
   const handleChangePasswordLength = (length: number): void => {
